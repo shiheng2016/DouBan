@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣</title>
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+    <!--头部导航-->
+    <header id="mgdb-header">
+        <div id="mgdb-header-wrapper" class="mgdb-container">
+            <div id="mgdb-header-search" class="mgdb-wrapper">
+                <div class="mgdb-content">
+                    <div id="mgdb-header-search-wrapper">
+                        <form action="https://www.douban.com/search" method="get">
+                            <span class="inp"><input type="text" maxlength="60" size="12" placeholder="书籍、电影、音乐、小组、小站、成员" name="q" autocomplete="off"></span>
+                            <span class="bn"><input type="submit" value="搜索"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="mgdb-header-logo" class="mgdb-nav">
+                <h1>
+                    <a href="https://www.douban.com">豆瓣</a>
+                </h1>
+            </div>
+            <div id="mgdb-header-menu" class="mgdb-aside">
+                <ul>
+                    <li> <a target="_blank" class="lnk-book" href="https://book.douban.com">豆瓣读书</a></li>
+                    <li> <a target="_blank" class="lnk-movie" href="https://movie.douban.com">豆瓣电影</a></li>
+                    <li> <a target="_blank" class="lnk-music" href="https://music.douban.com">豆瓣音乐</a></li>
+                    <li> <a target="_blank" class="lnk-group" href="https://www.douban.com/group/">豆瓣小组</a></li>
+                    <li> <a target="_blank" class="lnk-events" href="https://www.douban.com/location/">豆瓣同城</a></li>
+                    <li> <a target="_blank" class="lnk-fm" href="https://douban.fm">豆瓣FM</a></li>
+                    <li> <a target="_blank" class="lnk-dongxi" href="https://dongxi.douban.com?dcs=anonymous-home&amp;dcm=douban">豆瓣东西</a></li>
+                    <li> <a target="_blank" class="lnk-market" href="https://market.douban.com?utm_campaign=anonymous_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web">豆瓣市集</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--匿名登录-->
+    <div id="mgdb-anony">
+        <div class="mgdb-anony-wrapper">
+            <div class="login">
+                <form id="lzform" name="lzform" method="post" action="https://www.douban.com/accounts/login">
+                    <fieldset>
+                        <input type="hidden" value="index_nav" name="source">
+                        <div class="item item-account">
+                            <input type="text" name="form_email" id="form_email" value="" class="inp" placeholder="邮箱 / 手机号" tabindex="1">
+                        </div>
+                        <div class="item item-passwd">
+                            <input name="form_password" placeholder="密码" id="form_password" class="inp" type="password" tabindex="2">
+                            <div class="opt">
+                                <a href="https://www.douban.com/accounts/resetpassword">帮助</a>
+                            </div>
+                        </div>
+                        <div class="item item-submit">
+                            <input value="登录豆瓣" type="submit" class="bn-submit" tabindex="4">
+                            <a href="/accounts/register" class="lnk-reg">注册帐号</a>
+                        </div>
+                        <div class="item-action">
+                            <label for="form_remember">
+                    <input name="remember" type="checkbox" id="form_remember" tabindex="4">记住我                </label>
+                            <ul class="item-action-third">
+                                <li><a class="wechat" href="https://www.douban.com/accounts/connect/wechat/?from=douban-web-anony-home" target="_blank" title="微信登录">微信登录</a></li>
+                                <li><a class="weibo" href="https://www.douban.com/accounts/connect/sina_weibo/?from=douban-web-anony-home" target="_blank" title="微博登录">微博登录</a></li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="app">
+                <p class="app-title">豆瓣<span>4.0</span></p>
+                <p class="app-slogan"><span>我们的精神角落</span></p>
+                <a href="https://www.douban.com/doubanapp/app?channel=nimingye" class="lnk-app">下载豆瓣 App</a>
+                <div class="app-qr">
+                    <a href="javascript: void 0;" class="lnk-qr" id="expand-qr"><img src="https://img3.doubanio.com/f/sns/0c708de69ce692883c1310053c5748c538938cb0/pics/sns/anony_home/icon_qrcode_green.png" width="28" height="28"></a>
+                    <div class="app-qr-expand">
+                        <img src="https://img3.doubanio.com/f/sns/1cad523e614ec4ecb6bf91b054436bb79098a958/pics/sns/anony_home/doubanapp_qrcode.png" width="160" height="160">
+                        <p>iOS / Android 扫码直接下载</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--热门推送-->
+    <div id="mgdb-anony-hotpush">
+        <div class="mgdb-anony-hotpush-wrapper">
+            <aside class="mgdb-push-aside">
+
+                <div style="margin:10px 0px;">
+                    <a target="_blank" href="https://moment.douban.com/app/?source=anony_douban"><img width="265" src="https://img5.doubanio.com/img/files/file-1431585796.jpg"></a>
+                </div>
+
+                <h2>
+                    线上活动 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                    <span class="pl">&nbsp;(
+                
+                    <a href="https://www.douban.com/online/?r=i" target="_self">更多</a>
+                ) </span>
+                </h2>
+
+                <div class="online">
+                    <ul>
+                        <li>
+                            <div class="title">
+                                <a href="https://www.douban.com/online/123060577/">来一句王家卫式的话</a>
+                            </div>
+                            <div class="desc">
+                                时间：1月2日 - 3月23日
+                                <br><span class="num">736人参加</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="https://www.douban.com/online/123090150/">【征集】用一张照片，回忆你的2016</a>
+                            </div>
+                            <div class="desc">
+                                时间：1月4日 - 3月5日
+                                <br><span class="num">933人参加</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="https://www.douban.com/online/123098972/">给我你的照片，让我为你画张肖像。2017鸡年大吉有奖版吧</a>
+                            </div>
+                            <div class="desc">
+                                时间：2月8日 - 5月7日
+                                <br><span class="num">398人参加</span>
+                            </div>
+                        </li>
+                        <!-- douban ad begin -->
+                        <li>
+                            <div id="dale_homepage_online_activity_promo_1" data-id=""></div>
+                        </li>
+                        <li>
+                            <div id="dale_anonymous_homepage_doublemint" data-id=""></div>
+                        </li>
+                        <!-- douban ad end -->
+                    </ul>
+                </div>
+            </aside>
+            <div class="mgdb-push-main">
+                <div class="mod">
+                    <h2>
+                        热点内容 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                        <span class="pl">&nbsp;(
+                
+                    <a href="https://www.douban.com/explore/" target="_self">更多</a>) </span>
+                    </h2>
+
+                    <div class="albums">
+                        <ul>
+                            <li>
+                                <div class="pic">
+                                    <a href="https://www.douban.com/photos/album/150673181/"><img src="https://img3.doubanio.com/view/photo/albumcover/public/p2221484331.jpg" data-origin="https://img3.doubanio.com/view/photo/albumcover/public/p2221484331.jpg" alt=""></a>
+                                </div>
+                                <a href="https://www.douban.com/photos/album/150673181/">胡同中的人和事2015</a>
+                                <span class="num">83张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <a href="https://www.douban.com/photos/album/1640377951/"><img src="https://img3.doubanio.com/view/photo/albumcover/public/p2405977585.jpg" data-origin="https://img3.doubanio.com/view/photo/albumcover/public/p2405977585.jpg" alt=""></a>
+                                </div>
+                                <a href="https://www.douban.com/photos/album/1640377951/">带着孩子漫步京都</a>
+                                <span class="num">82张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <a href="https://www.douban.com/photos/album/1627099426/"><img src="https://img3.doubanio.com/view/photo/albumcover/public/p2333093845.jpg" data-origin="https://img3.doubanio.com/view/photo/albumcover/public/p2333093845.jpg" alt=""></a>
+                                </div>
+                                <a href="https://www.douban.com/photos/album/1627099426/">兔毛飞</a>
+                                <span class="num">70张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <a href="https://www.douban.com/photos/album/1642818999/"><img src="https://img3.doubanio.com/view/photo/albumcover/public/p2428381083.jpg" data-origin="https://img3.doubanio.com/view/photo/albumcover/public/p2428381083.jpg" alt=""></a>
+                                </div>
+                                <a href="https://www.douban.com/photos/album/1642818999/">【画不够的聂隐娘】</a>
+                                <span class="num">24张照片</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="notes">
+                        <ul>
+                            <li class="first">
+                                <div class="title">
+                                    <a href="https://www.douban.com/note/606117259/">一次猫事友好访问</a>
+                                </div>
+                                <div class="author">
+                                    Cornetto的日记
+                                </div>
+                                <p>今天，举家出动，去朋友家蹭了顿饭吃。达成这件事的前提是摸二郎擅于外出。她的优...</p>
+                            </li>
+
+                            <li><a href="https://www.douban.com/note/606724011/">他在临死前，写了一篇童话</a></li>
+                            <li><a href="https://www.douban.com/note/606563757/">我等到花儿也谢了，你才出续集！——细数13部姗姗来迟的续集电影</a></li>
+                            <li><a href="https://www.douban.com/note/606373753/">十九世纪欧洲油画：那些我在博物馆中没有看到的细节</a></li>
+                            <li><a href="https://www.douban.com/note/606537768/">结婚纪念日发生的血案</a></li>
+                            <li><a href="https://www.douban.com/note/604987435/">学生以上，熟女未满，这种“大女孩”的气质最让人留恋</a></li>
+                            <li><a href="https://www.douban.com/note/606605003/">便利店是城市深夜的一盏温柔招魂灯 | 3个便利店员和31个顾客的故事</a></li>
+                            <li><a href="https://www.douban.com/note/606380235/">参加过100多次相亲，31岁的我至今一次恋爱都没谈过 | 故事姜饼人</a></li>
+                            <li><a href="https://www.douban.com/note/605918449/">姜昆应该怎么给母老虎发信号才能逃出老虎洞呢？</a></li>
+                            <li><a href="https://www.douban.com/note/606000758/">专辑不会消亡，实体唱片未必</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--内容部分-->
+    <div id="mgdb-anony-content">
+        <div id="mgdb-anony-content-wrapper">
+            <!--电影-->
+            <div id="mgdb-anony-movie" class="clearfix">
+                <div class="mgdb-container">
+                    <div class="mgdb-wrapper">
+                        <div class="mgdb-content">
+
+
+                            <h2>
+                                正在热映 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://movie.douban.com/showtimes/" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+                            <div class="movie-list list">
+                                <ul>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://movie.douban.com/subject/3230115/"><img src="https://img5.doubanio.com/view/movie_poster_cover/spst/public/p2410569976.jpg" data-origin="https://img5.doubanio.com/view/movie_poster_cover/spst/public/p2410569976.jpg" alt="极限特工3：终极回归"></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="https://movie.douban.com/subject/3230115/">极限特工3：终...</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar30"></span><i>5.8</i>
+                                        </div>
+                                        <a href="https://movie.douban.com/subject/3230115/cinema/" class="bn-link bn-ticket">选座购票</a>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://movie.douban.com/subject/26354572/"><img src="https://img5.doubanio.com/view/movie_poster_cover/spst/public/p2411622136.jpg" data-origin="https://img5.doubanio.com/view/movie_poster_cover/spst/public/p2411622136.jpg" alt="欢乐好声音"></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="https://movie.douban.com/subject/26354572/">欢乐好声音</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar45"></span><i>8.3</i>
+                                        </div>
+                                        <a href="https://movie.douban.com/subject/26354572/cinema/" class="bn-link bn-ticket">选座购票</a>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://movie.douban.com/subject/25934014/"><img src="https://img3.doubanio.com/view/movie_poster_cover/spst/public/p2425658570.jpg" data-origin="https://img3.doubanio.com/view/movie_poster_cover/spst/public/p2425658570.jpg" alt="爱乐之城"></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="https://movie.douban.com/subject/25934014/">爱乐之城</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar45"></span><i>8.5</i>
+                                        </div>
+                                        <a href="https://movie.douban.com/subject/25934014/cinema/" class="bn-link bn-ticket">选座购票</a>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://movie.douban.com/subject/26862259/"><img src="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2408407697.jpg" data-origin="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2408407697.jpg" alt="乘风破浪"></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="https://movie.douban.com/subject/26862259/">乘风破浪</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar35"></span><i>7.0</i>
+                                        </div>
+                                        <a href="https://movie.douban.com/subject/26862259/cinema/" class="bn-link bn-ticket">选座购票</a>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://movie.douban.com/subject/26182910/"><img src="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2412371389.jpg" data-origin="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2412371389.jpg" alt="功夫瑜伽"></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="https://movie.douban.com/subject/26182910/">功夫瑜伽</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar30"></span><i>5.3</i>
+                                        </div>
+                                        <a href="https://movie.douban.com/subject/26182910/cinema/" class="bn-link bn-ticket">选座购票</a>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://movie.douban.com/subject/26815856/"><img src="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2426231159.jpg" data-origin="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2426231159.jpg" alt="疯岳撬佳人"></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="https://movie.douban.com/subject/26815856/">疯岳撬佳人</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar20"></span><i>3.5</i>
+                                        </div>
+                                        <a href="https://movie.douban.com/subject/26815856/cinema/" class="bn-link bn-ticket">选座购票</a>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://movie.douban.com/subject/26668750/"><img src="https://img3.doubanio.com/view/movie_poster_cover/spst/public/p2428993870.jpg" data-origin="https://img3.doubanio.com/view/movie_poster_cover/spst/public/p2428993870.jpg" alt="完美有多美"></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="https://movie.douban.com/subject/26668750/">完美有多美</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar30"></span><i>5.8</i>
+                                        </div>
+                                        <a href="https://movie.douban.com/subject/26668750/cinema/" class="bn-link bn-ticket">选座购票</a>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://movie.douban.com/subject/4078592/"><img src="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2426952758.jpg" data-origin="https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2426952758.jpg" alt="上海王"></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="https://movie.douban.com/subject/4078592/">上海王</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar30"></span><i>5.3</i>
+                                        </div>
+                                        <a href="https://movie.douban.com/subject/4078592/cinema/" class="bn-link bn-ticket">选座购票</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mgdb-nav">
+                        <h2><a href="https://movie.douban.com">电影</a></h2>
+                        <div class="side-links nav-anon">
+                            <ul>
+                                <li><a href="https://movie.douban.com/nowplaying/">影讯&amp;购票</a></li>
+                                <li class="site-nav-bt">
+                                    <a href="https://movie.douban.com/explore">选电影</a>
+                                    <img src="https://img3.doubanio.com/pics/new_menu.gif">
+                                </li>
+                                <li><a href="https://movie.douban.com/tv/">电视剧</a></li>
+                                <li><a href="https://movie.douban.com/chart">排行榜</a></li>
+                                <li><a href="https://movie.douban.com/tag/">分类</a></li>
+                                <li><a href="https://movie.douban.com/review/best/">影评</a></li>
+                                <li class="site-nav-bt"><a href="https://movie.douban.com/trailers">预告片</a></li>
+                                <li><a href="https://movie.douban.com/askmatrix/hot_questions/all">问答</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mgdb-aside">
+                        <div class="mod">
+
+
+                            <h2>
+                                影片分类 ······
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://movie.douban.com/tag/?view=type" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+                            <div class="tags list">
+                                <ul>
+                                    <li><a href="https://movie.douban.com/tag/爱情">爱情</a></li>
+                                    <li><a href="https://movie.douban.com/tag/喜剧">喜剧</a></li>
+                                    <li><a href="https://movie.douban.com/tag/动画">动画</a></li>
+                                    <li><a href="https://movie.douban.com/tag/剧情">剧情</a></li>
+                                    <li><a href="https://movie.douban.com/tag/科幻">科幻</a></li>
+                                    <li><a href="https://movie.douban.com/tag/动作">动作</a></li>
+                                    <li><a href="https://movie.douban.com/tag/经典">经典</a></li>
+                                    <li><a href="https://movie.douban.com/tag/悬疑">悬疑</a></li>
+                                    <li><a href="https://movie.douban.com/tag/青春">青春</a></li>
+                                    <li><a href="https://movie.douban.com/tag/犯罪">犯罪</a></li>
+                                    <li><a href="https://movie.douban.com/tag/惊悚">惊悚</a></li>
+                                    <li><a href="https://movie.douban.com/tag/文艺">文艺</a></li>
+                                    <li><a href="https://movie.douban.com/tag/搞笑">搞笑</a></li>
+                                    <li><a href="https://movie.douban.com/tag/纪录片">纪录片</a></li>
+                                    <li><a href="https://movie.douban.com/tag/励志">励志</a></li>
+                                    <li><a href="https://movie.douban.com/tag/恐怖">恐怖</a></li>
+                                    <li><a href="https://movie.douban.com/tag/战争">战争</a></li>
+                                    <li><a href="https://movie.douban.com/tag/短片">短片</a></li>
+                                    <li><a href="https://movie.douban.com/tag/美国">美国</a></li>
+                                    <li><a href="https://movie.douban.com/tag/日本">日本</a></li>
+                                    <li><a href="https://movie.douban.com/tag/香港">香港</a></li>
+                                    <li><a href="https://movie.douban.com/tag/英国">英国</a></li>
+                                    <li><a href="https://movie.douban.com/tag/中国">中国</a></li>
+                                    <li><a href="https://movie.douban.com/tag/韩国">韩国</a></li>
+                                    <li><a href="https://movie.douban.com/tag/法国">法国</a></li>
+                                    <li><a href="https://movie.douban.com/tag/台湾">台湾</a></li>
+                                    <li><a href="https://movie.douban.com/tag/中国大陆">中国大陆</a></li>
+                                    <li><a href="https://movie.douban.com/tag/德国">德国</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mod">
+
+
+                            <h2>
+                                近期热门 ······
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://movie.douban.com/chart" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+                            <div class="list1 movie-charts">
+                                <ol>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/25980443/">海边的曼彻斯特</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/26325320/">血战钢锯岭</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/6873905/">成长边缘</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/25983044/">比利·林恩的中场战事</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/26677495/">帕特森</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/26615208/">隐藏人物</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/19951149/">黑夜传说5：血战</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/26630781/">我不是潘金莲</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/4849728/">第一夫人</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://movie.douban.com/subject/26416603/">萨利机长</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--小组-->
+            <div id="mgdb-anony-group" class="clearfix">
+                <div class="mgdb-container">
+                    <div class="mgdb-wrapper">
+                        <div class="mgdb-content">
+
+
+                            <h2>
+                                热门小组 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://www.douban.com/group/explore" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+                            <div class="group-list list">
+                                <ul>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/149062/"><img src="https://img1.doubanio.com/icon/g149062-18.jpg" data-origin="https://img1.doubanio.com/icon/g149062-18.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/149062/">◎变态学英语交流小组◎</a>
+                                            </div>
+                                            285910 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/16533/"><img src="https://img3.doubanio.com/icon/g16533-1.jpg" data-origin="https://img3.doubanio.com/icon/g16533-1.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/16533/">帮助大山里的孩子</a>
+                                            </div>
+                                            21405 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/feixv/"><img src="https://img3.doubanio.com/icon/g66112-1.jpg" data-origin="https://img3.doubanio.com/icon/g66112-1.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/feixv/">北京废墟探险团</a>
+                                            </div>
+                                            5122 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/MandT/"><img src="https://img1.doubanio.com/icon/g147604-57.jpg" data-origin="https://img1.doubanio.com/icon/g147604-57.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/MandT/">推理翻译</a>
+                                            </div>
+                                            8534 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/chan-cha/"><img src="https://img1.doubanio.com/icon/g267908-19.jpg" data-origin="https://img1.doubanio.com/icon/g267908-19.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/chan-cha/">好姑娘永垂不朽！</a>
+                                            </div>
+                                            11069 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/13196/"><img src="https://img3.doubanio.com/icon/g13196-1.jpg" data-origin="https://img3.doubanio.com/icon/g13196-1.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/13196/">用自己的光照亮自己  [限量版]</a>
+                                            </div>
+                                            4487 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/393455/"><img src="https://img3.doubanio.com/icon/g393455-1.jpg" data-origin="https://img3.doubanio.com/icon/g393455-1.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/393455/">帮友邻找对象小组</a>
+                                            </div>
+                                            23714 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/119078/"><img src="https://img3.doubanio.com/icon/g119078-10.jpg" data-origin="https://img3.doubanio.com/icon/g119078-10.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/119078/">昨晚你做梦了吗  *  *！~</a>
+                                            </div>
+                                            1757 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/Coursera-er/"><img src="https://img3.doubanio.com/icon/g397897-25.jpg" data-origin="https://img3.doubanio.com/icon/g397897-25.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/Coursera-er/">Coursera Learning Platform</a>
+                                            </div>
+                                            21103 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/cuthair/"><img src="https://img3.doubanio.com/icon/g109498-1.jpg" data-origin="https://img3.doubanio.com/icon/g109498-1.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/cuthair/">自己给自己剪头发</a>
+                                            </div>
+                                            31774 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/badteeth/"><img src="https://img3.doubanio.com/icon/g28913-3.jpg" data-origin="https://img3.doubanio.com/icon/g28913-3.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/badteeth/">我们都有一口烂牙</a>
+                                            </div>
+                                            17059 个成员
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/group/behavior/"><img src="https://img1.doubanio.com/icon/g299338-47.jpg" data-origin="https://img1.doubanio.com/icon/g299338-47.jpg" alt="" width="48"></a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/group/behavior/">如何与众怪兽相处</a>
+                                            </div>
+                                            14730 个成员
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mgdb-nav">
+                        <h2 class="section-title"><a href="https://www.douban.com/group/">小组</a></h2>
+
+
+                        <div class="side-links nav-anon">
+                            <ul>
+
+                                <li><a href="/group/explore">精选</a></li>
+
+                                <li><a href="/group/explore/culture">文化</a></li>
+
+                                <li><a href="/group/explore/travel">行摄</a></li>
+
+                                <li><a href="/group/explore/ent">娱乐</a></li>
+
+                                <li><a href="/group/explore/fashion">时尚</a></li>
+
+                                <li><a href="/group/explore/life">生活</a></li>
+
+                                <li><a href="/group/explore/tech">科技</a></li>
+
+                            </ul>
+                        </div>
+
+
+
+
+                        <div class="apps-list">
+                            <ul>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="mgdb-aside">
+                        <div class="mod">
+
+                            <h2>
+                                小组分类 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                            </h2>
+
+                            <div class="cate group-cate">
+                                <ul>
+                                    <li class="cate-label"><a href="https://www.douban.com/group/explore?tag=兴趣">兴趣» </a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=旅行">旅行</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=摄影">摄影</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=影视">影视</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=音乐">音乐</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=文学">文学</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=游戏">游戏</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=动漫">动漫</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=运动">运动</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=戏曲">戏曲</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=桌游">桌游</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=怪癖">怪癖</a></li>
+                                </ul>
+                            </div>
+                            <div class="cate group-cate">
+                                <ul>
+                                    <li class="cate-label"><a href="https://www.douban.com/group/explore?tag=生活">生活» </a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=健康">健康</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=美食">美食</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=宠物">宠物</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=美容">美容</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=化妆">化妆</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=护肤">护肤</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=服饰">服饰</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=公益">公益</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=家庭">家庭</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=育儿">育儿</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=汽车">汽车</a></li>
+                                </ul>
+                            </div>
+                            <div class="cate group-cate">
+                                <ul>
+                                    <li class="cate-label"><a href="https://www.douban.com/group/explore?tag=购物">购物» </a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=淘宝">淘宝</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=二手">二手</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=团购">团购</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=数码">数码</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=品牌">品牌</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=文具">文具</a></li>
+                                </ul>
+                            </div>
+                            <div class="cate group-cate">
+                                <ul>
+                                    <li class="cate-label"><a href="https://www.douban.com/group/explore?tag=社会">社会» </a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=求职">求职</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=租房">租房</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=励志">励志</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=留学">留学</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=出国">出国</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=理财">理财</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=传媒">传媒</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=创业">创业</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=考试">考试</a></li>
+                                </ul>
+                            </div>
+                            <div class="cate group-cate">
+                                <ul>
+                                    <li class="cate-label"><a href="https://www.douban.com/group/explore?tag=艺术">艺术» </a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=设计">设计</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=手工">手工</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=展览">展览</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=曲艺">曲艺</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=舞蹈">舞蹈</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=雕塑">雕塑</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=纹身">纹身</a></li>
+                                </ul>
+                            </div>
+                            <div class="cate group-cate">
+                                <ul>
+                                    <li class="cate-label"><a href="https://www.douban.com/group/explore?tag=学术">学术» </a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=人文">人文</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=社科">社科</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=自然">自然</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=建筑">建筑</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=国学">国学</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=语言">语言</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=宗教">宗教</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=哲学">哲学</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=软件">软件</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=硬件">硬件</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=互联网">互联网</a></li>
+                                </ul>
+                            </div>
+                            <div class="cate group-cate">
+                                <ul>
+                                    <li class="cate-label"><a href="https://www.douban.com/group/explore?tag=情感">情感» </a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=恋爱">恋爱</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=心情">心情</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=心理学">心理学</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=星座">星座</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=塔罗">塔罗</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=LES">LES</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=GAY">GAY</a></li>
+                                </ul>
+                            </div>
+                            <div class="cate group-cate">
+                                <ul>
+                                    <li class="cate-label"><a href="https://www.douban.com/group/explore?tag=闲聊">闲聊» </a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=吐槽">吐槽</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=笑话">笑话</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=直播">直播</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=八卦">八卦</a></li>
+                                    <li><a href="https://www.douban.com/group/explore?tag=发泄">发泄</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--读书-->
+            <div id="mgdb-anony-book" class="clearfix">
+                <div class="mgdb-container">
+                    <div class="mgdb-wrapper">
+                        <div class="mgdb-content">
+
+                            <div class="mod">
+
+                                <h2>
+                                    新书速递 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                    <span class="pl">&nbsp;(
+                
+                    <a href="https://book.douban.com/latest" target="_self">更多</a>
+                ) </span>
+                                </h2>
+
+                                <div class="book-list list">
+                                    <ul>
+                                        <li>
+                                            <div class="pic">
+                                                <a href="https://book.douban.com/subject/26954720/"><img src="https://img3.doubanio.com/mpic/s29281315.jpg" data-origin="https://img3.doubanio.com/mpic/s29281315.jpg" alt="拍案惊奇"></a>
+                                            </div>
+                                            <div class="title">
+                                                <a href="https://book.douban.com/subject/26954720/">拍案惊奇</a>
+                                            </div>
+                                            <div class="author">凌濛初</div>
+                                            <a href="https://read.douban.com/reader/ebook/30627446/" target="_blank" class="bn-link">免费试读</a>
+                                        </li>
+                                        <li>
+                                            <div class="pic">
+                                                <a href="https://book.douban.com/subject/20515828"><img src="https://img1.doubanio.com/view/ark_article_cover/large/public/30453208.jpg?v=1487044054.0" data-origin="https://img1.doubanio.com/view/ark_article_cover/large/public/30453208.jpg?v=1487044054.0"
+                                                        alt="傅科摆"></a>
+                                            </div>
+                                            <div class="title">
+                                                <a href="https://book.douban.com/subject/20515828">傅科摆</a>
+                                            </div>
+                                            <div class="author">〔意〕翁贝托·...</div>
+                                            <a href="https://read.douban.com/reader/ebook/30453208/" target="_blank" class="bn-link">免费试读</a>
+                                        </li>
+                                        <li>
+                                            <div class="pic">
+                                                <a href="https://book.douban.com/subject/26782040"><img src="https://img3.doubanio.com/view/ark_article_cover/large/public/22324213.jpg?v=1466386493.0" data-origin="https://img3.doubanio.com/view/ark_article_cover/large/public/22324213.jpg?v=1466386493.0"
+                                                        alt="上海王"></a>
+                                            </div>
+                                            <div class="title">
+                                                <a href="https://book.douban.com/subject/26782040">上海王</a>
+                                            </div>
+                                            <div class="author">虹影</div>
+                                            <a href="https://read.douban.com/reader/ebook/22324213/" target="_blank" class="bn-link">免费试读</a>
+                                        </li>
+                                        <li>
+                                            <div class="pic">
+                                                <a href="https://book.douban.com/subject/4913064"><img src="https://img3.doubanio.com/view/ark_article_cover/large/public/30541512.jpg?v=1486955253.0" data-origin="https://img3.doubanio.com/view/ark_article_cover/large/public/30541512.jpg?v=1486955253.0"
+                                                        alt="活着"></a>
+                                            </div>
+                                            <div class="title">
+                                                <a href="https://book.douban.com/subject/4913064">活着</a>
+                                            </div>
+                                            <div class="author">余华</div>
+                                            <a href="https://read.douban.com/reader/ebook/30541512/" target="_blank" class="bn-link">免费试读</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mod">
+
+                                <h2>
+                                    原创数字作品 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                    <span class="pl">&nbsp;(
+                
+                    <a href="https://read.douban.com/category/fiction?sort=top&amp;cat=article" target="_self">更多</a>
+                ) </span>
+                                </h2>
+
+                                <div class="book-list list">
+                                    <ul>
+                                        <li>
+                                            <div class="pic">
+                                                <a href="https://read.douban.com/ebook/25497604" target="_blank"><img src="https://img3.doubanio.com/view/ark_article_cover/large/public/25497604.jpg?v=1485251846.0" data-origin="https://img3.doubanio.com/view/ark_article_cover/large/public/25497604.jpg?v=1485251846.0"
+                                                        alt="星际救援"></a>
+                                            </div>
+                                            <div class="title">
+                                                <a href="https://read.douban.com/ebook/25497604" target="_blank">星际救援</a>
+                                            </div>
+                                            <div class="author">林野</div>
+                                            <div class="price">
+                                                5.99元
+                                            </div>
+                                            <a href="https://read.douban.com/reader/ebook/25497604/" target="_blank" class="bn-link">免费试读</a>
+                                        </li>
+                                        <li>
+                                            <div class="pic">
+                                                <a href="https://read.douban.com/ebook/25909466" target="_blank"><img src="https://img5.doubanio.com/view/ark_article_cover/large/public/25909466.jpg?v=1486717564.0" data-origin="https://img5.doubanio.com/view/ark_article_cover/large/public/25909466.jpg?v=1486717564.0"
+                                                        alt="长生锁"></a>
+                                            </div>
+                                            <div class="title">
+                                                <a href="https://read.douban.com/ebook/25909466" target="_blank">长生锁</a>
+                                            </div>
+                                            <div class="author">江郎</div>
+                                            <div class="price">
+                                                1.99元
+                                            </div>
+                                            <a href="https://read.douban.com/reader/ebook/25909466/" target="_blank" class="bn-link">免费试读</a>
+                                        </li>
+                                        <li>
+                                            <div class="pic">
+                                                <a href="https://read.douban.com/ebook/29111431" target="_blank"><img src="https://img3.doubanio.com/view/ark_article_cover/large/public/29111431.jpg?v=1485252897.0" data-origin="https://img3.doubanio.com/view/ark_article_cover/large/public/29111431.jpg?v=1485252897.0"
+                                                        alt="伊斯坦布尔一年"></a>
+                                            </div>
+                                            <div class="title">
+                                                <a href="https://read.douban.com/ebook/29111431" target="_blank">伊斯坦布尔一年...</a>
+                                            </div>
+                                            <div class="author">桑麻</div>
+                                            <div class="price">
+                                                4.99元
+                                            </div>
+                                            <a href="https://read.douban.com/reader/ebook/29111431/" target="_blank" class="bn-link">免费试读</a>
+                                        </li>
+                                        <li>
+                                            <div class="pic">
+                                                <a href="https://read.douban.com/ebook/29704034" target="_blank"><img src="https://img3.doubanio.com/view/ark_article_cover/large/public/29704034.jpg?v=1485252881.0" data-origin="https://img3.doubanio.com/view/ark_article_cover/large/public/29704034.jpg?v=1485252881.0"
+                                                        alt="那些拿起相机的日子"></a>
+                                            </div>
+                                            <div class="title">
+                                                <a href="https://read.douban.com/ebook/29704034" target="_blank">那些拿起相机的...</a>
+                                            </div>
+                                            <div class="author">晓</div>
+                                            <div class="price">
+                                                1.99元
+                                            </div>
+                                            <a href="https://read.douban.com/reader/ebook/29704034/" target="_blank" class="bn-link">免费试读</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mgdb-nav">
+                        <div class="mod">
+                            <h2 class="section-title"><a href="https://book.douban.com">读书</a></h2>
+
+
+                            <div class="side-links nav-anon">
+                                <ul>
+
+                                    <li><a href="https://book.douban.com/tag/">分类浏览</a></li>
+
+                                    <li>
+                                        <a target="_blank" href="https://read.douban.com?dcn=entry&amp;dcs=book-nav&amp;dcm=douban">阅读</a>
+                                        <img style="top: 4px; position: absolute;" src="https://img3.doubanio.com/pics/new_menu.gif">
+                                    </li>
+
+                                    <li><a href="https://book.douban.com/writers/">作者</a></li>
+
+                                    <li><a href="https://book.douban.com/review/best/">书评</a></li>
+
+                                    <li class="site-nav-prom">
+                                        <a class="lnk-buy" href="https://book.douban.com/cart">
+                                            <em>购书单</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="apps-list">
+                            <ul>
+                                <li><a href="https://read.douban.com/app/" class="lnk-icon"><i class="app-icon app-icon-read"></i></a><a href="https://read.douban.com/app/">豆瓣阅读</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="mgdb-aside">
+
+                        <div class="mod">
+
+                            <h2>
+                                热门标签 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://book.douban.com/tag/?view=type" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+                            <div class="book-cate-mod">
+                                <div class="cate book-cate">
+                                    <ul>
+                                        <li class="cate-label">[文学]</li>
+                                        <li><a href="https://book.douban.com/tag/小说">小说</a></li>
+                                        <li><a href="https://book.douban.com/tag/随笔">随笔</a></li>
+                                        <li><a href="https://book.douban.com/tag/日本文学">日本文学</a></li>
+                                        <li><a href="https://book.douban.com/tag/散文">散文</a></li>
+                                        <li><a href="https://book.douban.com/tag/诗歌">诗歌</a></li>
+                                        <li><a href="https://book.douban.com/tag/童话">童话</a></li>
+                                        <li><a href="https://book.douban.com/tag/名著">名著</a></li>
+                                        <li><a href="https://book.douban.com/tag/港台">港台</a></li>
+                                        <li><a href="https://book.douban.com/tag/?view=type#文学">更多</a></li>
+                                    </ul>
+                                </div>
+                                <div class="cate book-cate">
+                                    <ul>
+                                        <li class="cate-label">[流行]</li>
+                                        <li><a href="https://book.douban.com/tag/漫画">漫画</a></li>
+                                        <li><a href="https://book.douban.com/tag/绘本">绘本</a></li>
+                                        <li><a href="https://book.douban.com/tag/推理">推理</a></li>
+                                        <li><a href="https://book.douban.com/tag/青春">青春</a></li>
+                                        <li><a href="https://book.douban.com/tag/言情">言情</a></li>
+                                        <li><a href="https://book.douban.com/tag/科幻">科幻</a></li>
+                                        <li><a href="https://book.douban.com/tag/武侠">武侠</a></li>
+                                        <li><a href="https://book.douban.com/tag/奇幻">奇幻</a></li>
+                                        <li><a href="https://book.douban.com/tag/?view=type#流行">更多</a></li>
+                                    </ul>
+                                </div>
+                                <div class="cate book-cate">
+                                    <ul>
+                                        <li class="cate-label">[文化]</li>
+                                        <li><a href="https://book.douban.com/tag/历史">历史</a></li>
+                                        <li><a href="https://book.douban.com/tag/哲学">哲学</a></li>
+                                        <li><a href="https://book.douban.com/tag/传记">传记</a></li>
+                                        <li><a href="https://book.douban.com/tag/设计">设计</a></li>
+                                        <li><a href="https://book.douban.com/tag/建筑">建筑</a></li>
+                                        <li><a href="https://book.douban.com/tag/电影">电影</a></li>
+                                        <li><a href="https://book.douban.com/tag/回忆录">回忆录</a></li>
+                                        <li><a href="https://book.douban.com/tag/音乐">音乐</a></li>
+                                        <li><a href="https://book.douban.com/tag/?view=type#文化">更多</a></li>
+                                    </ul>
+                                </div>
+                                <div class="cate book-cate">
+                                    <ul>
+                                        <li class="cate-label">[生活]</li>
+                                        <li><a href="https://book.douban.com/tag/旅行">旅行</a></li>
+                                        <li><a href="https://book.douban.com/tag/励志">励志</a></li>
+                                        <li><a href="https://book.douban.com/tag/职场">职场</a></li>
+                                        <li><a href="https://book.douban.com/tag/美食">美食</a></li>
+                                        <li><a href="https://book.douban.com/tag/教育">教育</a></li>
+                                        <li><a href="https://book.douban.com/tag/灵修">灵修</a></li>
+                                        <li><a href="https://book.douban.com/tag/健康">健康</a></li>
+                                        <li><a href="https://book.douban.com/tag/家居">家居</a></li>
+                                        <li><a href="https://book.douban.com/tag/?view=type#生活">更多</a></li>
+                                    </ul>
+                                </div>
+                                <div class="cate book-cate">
+                                    <ul>
+                                        <li class="cate-label">[经管]</li>
+                                        <li><a href="https://book.douban.com/tag/经济学">经济学</a></li>
+                                        <li><a href="https://book.douban.com/tag/管理">管理</a></li>
+                                        <li><a href="https://book.douban.com/tag/商业">商业</a></li>
+                                        <li><a href="https://book.douban.com/tag/金融">金融</a></li>
+                                        <li><a href="https://book.douban.com/tag/营销">营销</a></li>
+                                        <li><a href="https://book.douban.com/tag/理财">理财</a></li>
+                                        <li><a href="https://book.douban.com/tag/股票">股票</a></li>
+                                        <li><a href="https://book.douban.com/tag/企业史">企业史</a></li>
+                                        <li><a href="https://book.douban.com/tag/?view=type#经管">更多</a></li>
+                                    </ul>
+                                </div>
+                                <div class="cate book-cate">
+                                    <ul>
+                                        <li class="cate-label">[科技]</li>
+                                        <li><a href="https://book.douban.com/tag/科普">科普</a></li>
+                                        <li><a href="https://book.douban.com/tag/互联网">互联网</a></li>
+                                        <li><a href="https://book.douban.com/tag/编程">编程</a></li>
+                                        <li><a href="https://book.douban.com/tag/交互设计">交互设计</a></li>
+                                        <li><a href="https://book.douban.com/tag/算法">算法</a></li>
+                                        <li><a href="https://book.douban.com/tag/通信">通信</a></li>
+                                        <li><a href="https://book.douban.com/tag/神经网络">神经网络</a></li>
+                                        <li><a href="https://book.douban.com/tag/?view=type#科技">更多</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--音乐-->
+            <div id="mgdb-anony-music" class="clearfix">
+                <div class="mgdb-container">
+                    <div class="mgdb-wrapper">
+                        <div class="mgdb-content">
+
+
+
+                            <h2>
+                                豆瓣新碟榜 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://music.douban.com#new1" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+                            <div class="album-list list">
+                                <ul>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://music.douban.com/subject/26969850/">
+                                                <img src="https://img3.doubanio.com/spic/s29346695.jpg" data-origin="https://img3.doubanio.com/spic/s29346695.jpg" alt="裸">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            1. <a href="https://music.douban.com/subject/26969850/">裸</a>
+                                        </div>
+                                        <div class="artist">
+                                            <a href="">郑秀文</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar35"></span><i>6.4</i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://music.douban.com/subject/26950098/">
+                                                <img src="https://img1.doubanio.com/spic/s29268289.jpg" data-origin="https://img1.doubanio.com/spic/s29268289.jpg" alt="Original">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            2. <a href="https://music.douban.com/subject/26950098/">Original</a>
+                                        </div>
+                                        <div class="artist">
+                                            <a href="">張懸</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar50"></span><i>9.3</i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://music.douban.com/subject/26971223/">
+                                                <img src="https://img1.doubanio.com/spic/s29334979.jpg" data-origin="https://img1.doubanio.com/spic/s29334979.jpg" alt="The Whimsical Voyage">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            3. <a href="https://music.douban.com/subject/26971223/">The Whimsical Voyage</a>
+                                        </div>
+                                        <div class="artist">
+                                            <a href="">张敬轩 王菀之</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar35"></span><i>6.6</i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://music.douban.com/subject/26944455/">
+                                                <img src="https://img1.doubanio.com/spic/s29261688.jpg" data-origin="https://img1.doubanio.com/spic/s29261688.jpg" alt="阴天王国">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            4. <a href="https://music.douban.com/subject/26944455/">阴天王国</a>
+                                        </div>
+                                        <div class="artist">
+                                            <a href="">不优雅先生</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar40"></span><i>7.7</i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://music.douban.com/subject/26949261/">
+                                                <img src="https://img3.doubanio.com/spic/s29270240.jpg" data-origin="https://img3.doubanio.com/spic/s29270240.jpg" alt="Life Will See You Now">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            5. <a href="https://music.douban.com/subject/26949261/">Life Will See You Now</a>
+                                        </div>
+                                        <div class="artist">
+                                            <a href="">Jens Lekman</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar40"></span><i>8.0</i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://music.douban.com/subject/26911968/">
+                                                <img src="https://img1.doubanio.com/spic/s29144287.jpg" data-origin="https://img1.doubanio.com/spic/s29144287.jpg" alt="I See You">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            6. <a href="https://music.douban.com/subject/26911968/">I See You</a>
+                                        </div>
+                                        <div class="artist">
+                                            <a href="">The xx</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar40"></span><i>7.5</i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://music.douban.com/subject/26963464/">
+                                                <img src="https://img1.doubanio.com/spic/s29341719.jpg" data-origin="https://img1.doubanio.com/spic/s29341719.jpg" alt="You Never Walk Alone">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            7. <a href="https://music.douban.com/subject/26963464/">You Never Walk Alone</a>
+                                        </div>
+                                        <div class="artist">
+                                            <a href="">防弹少年团 방탄소년단 BTS</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar40"></span><i>8.0</i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://music.douban.com/subject/26967347/">
+                                                <img src="https://img3.doubanio.com/spic/s29323650.jpg" data-origin="https://img3.doubanio.com/spic/s29323650.jpg" alt="OO">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            8. <a href="https://music.douban.com/subject/26967347/">OO</a>
+                                        </div>
+                                        <div class="artist">
+                                            <a href="">金海率 Zion.T</a>
+                                        </div>
+                                        <div class="rating">
+                                            <span class="allstar35"></span><i>6.9</i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+                            <h2>
+                                热门歌单 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://music.douban.com/programmes/" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+                            <div class="programme-list list">
+                                <ul>
+
+                                    <li>
+                                        <div class="pic cover"><img width="80" src="https://img3.doubanio.com/img/songlist/large/264061-1.jpg"><a href="https://music.douban.com/programme/264061" target="_blank"><i></i></a></div>
+                                        <div class="title">古典音乐之旅</div>
+                                    </li>
+
+                                    <li>
+                                        <div class="pic cover"><img width="80" src="https://img3.doubanio.com/img/songlist/large/684502-1.jpg"><a href="https://music.douban.com/programme/684502" target="_blank"><i></i></a></div>
+                                        <div class="title">奇怪の可爱 II</div>
+                                    </li>
+
+                                    <li>
+                                        <div class="pic cover"><img width="80" src="https://img3.doubanio.com/img/songlist/large/458015-1.jpg"><a href="https://music.douban.com/programme/458015" target="_blank"><i></i></a></div>
+                                        <div class="title">你一定听过它的另一个版本</div>
+                                    </li>
+
+                                    <li>
+                                        <div class="pic cover"><img width="80" src="https://img3.doubanio.com/img/songlist/large/305159-1.jpg"><a href="https://music.douban.com/programme/305159" target="_blank"><i></i></a></div>
+                                        <div class="title">孤独之侣（西）</div>
+                                    </li>
+
+                                    <li>
+                                        <div class="pic cover"><img width="80" src="https://img3.doubanio.com/img/songlist/large/5521949-2.jpg"><a href="https://music.douban.com/programme/5521949" target="_blank"><i></i></a></div>
+                                        <div class="title">蹦跶起来说声嗨</div>
+                                    </li>
+
+                                    <li>
+                                        <div class="pic cover"><img width="80" src="https://img1.doubanio.com/img/songlist/large/291319-9.jpg"><a href="https://music.douban.com/programme/291319" target="_blank"><i></i></a></div>
+                                        <div class="title">但愿我是那风</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mgdb-nav">
+                        <h2 class="section-title"><a href="https://music.douban.com">音乐</a></h2>
+
+
+                        <div class="side-links nav-anon">
+                            <ul>
+
+                                <li><a href="https://music.douban.com/artists/">音乐人</a></li>
+
+                                <li><a href="https://music.douban.com/artists/royalty/">金羊毛计划</a></li>
+
+                                <li><a href="https://music.douban.com/topics/">专题</a></li>
+
+                                <li><a href="https://music.douban.com/chart">排行榜</a></li>
+
+                                <li><a href="https://music.douban.com/tag/">分类浏览</a></li>
+
+                                <li><a href="https://music.douban.com/review/latest/">乐评</a></li>
+
+                                <li><a href="https://douban.fm/?from_=music_nav">豆瓣FM</a></li>
+
+                                <li><a href="https://douban.fm/explore/songlists/">歌单</a></li>
+
+                                <li><a href="https://artist.douban.com/abilu/2016">阿比鹿音乐奖</a></li>
+
+                            </ul>
+                        </div>
+
+
+
+
+                        <div class="apps-list">
+                            <ul>
+                                <li><a href="https://douban.fm/app?from_=shire_anonymous_home" class="lnk-icon"><i class="app-icon app-icon-fm"></i></a><a href="https://douban.fm/app?from_=shire_anonymous_home">豆瓣FM</a></li>
+                                <li><a href="https://artist.douban.com/app" class="lnk-icon"><i class="app-icon app-icon-artists"></i></a><a href="https://artist.douban.com/app">豆瓣音乐人</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="mgdb-aside">
+                        <div class="mod">
+
+
+                            <h2>
+                                本周流行音乐人 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://music.douban.com/artists/" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+                            <div class="list1 artist-charts">
+                                <ul>
+                                    <li>
+                                        <span class="num">1.</span>
+                                        <div class="pic artist-song-play" data-sids="[&quot;692349&quot;, &quot;390071&quot;, &quot;401466&quot;]">
+                                            <a href="https://site.douban.com/wpoxs/"><img src="https://img1.doubanio.com/view/site/small/public/fc00cb95a9b74d9.jpg" data-origin="https://img1.doubanio.com/view/site/small/public/fc00cb95a9b74d9.jpg" width="48"></a>
+                                            <i class="icon icon-bg"></i>
+                                            <i class="icon icon-stat icon-play"></i>
+                                        </div>
+                                        <div class="content">
+                                            <a href="https://site.douban.com/wpoxs/">放肆的肆</a>
+                                            <div class="desc">
+                                                流派: 流行 Pop
+                                                <br>96417人关注
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="num">2.</span>
+                                        <div class="pic artist-song-play" data-sids="[&quot;692140&quot;, &quot;146958&quot;, &quot;615824&quot;]">
+                                            <a href="https://site.douban.com/arioso/"><img src="https://img3.doubanio.com/view/site/small/public/9d557e515d00160.jpg" data-origin="https://img3.doubanio.com/view/site/small/public/9d557e515d00160.jpg" width="48"></a>
+                                            <i class="icon icon-bg"></i>
+                                            <i class="icon icon-stat icon-play"></i>
+                                        </div>
+                                        <div class="content">
+                                            <a href="https://site.douban.com/arioso/">Arioso</a>
+                                            <div class="desc">
+                                                流派: 流行 Pop
+                                                <br>3293人关注
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="num">3.</span>
+                                        <div class="pic artist-song-play" data-sids="[&quot;691519&quot;, &quot;622968&quot;, &quot;574911&quot;]">
+                                            <a href="https://site.douban.com/chenhongyu/"><img src="https://img1.doubanio.com/view/site/small/public/b598aae89b03218.jpg" data-origin="https://img1.doubanio.com/view/site/small/public/b598aae89b03218.jpg" width="48"></a>
+                                            <i class="icon icon-bg"></i>
+                                            <i class="icon icon-stat icon-play"></i>
+                                        </div>
+                                        <div class="content">
+                                            <a href="https://site.douban.com/chenhongyu/">陈鸿宇</a>
+                                            <div class="desc">
+                                                流派: 民谣 Folk
+                                                <br>8661人关注
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="num">4.</span>
+                                        <div class="pic artist-song-play" data-sids="[&quot;692025&quot;, &quot;122932&quot;, &quot;344925&quot;]">
+                                            <a href="https://site.douban.com/marvel/"><img src="https://img3.doubanio.com/view/site/small/public/03ae28984c6892d.jpg" data-origin="https://img3.doubanio.com/view/site/small/public/03ae28984c6892d.jpg" width="48"></a>
+                                            <i class="icon icon-bg"></i>
+                                            <i class="icon icon-stat icon-play"></i>
+                                        </div>
+                                        <div class="content">
+                                            <a href="https://site.douban.com/marvel/">Mr.マーベル</a>
+                                            <div class="desc">
+                                                流派: 流行 Pop
+                                                <br>1062人关注
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="num">5.</span>
+                                        <div class="pic artist-song-play" data-sids="[&quot;691455&quot;, &quot;723&quot;, &quot;2111&quot;]">
+                                            <a href="https://site.douban.com/coverpeople/"><img src="https://img1.doubanio.com/view/site/small/public/656b798564d23ac.jpg" data-origin="https://img1.doubanio.com/view/site/small/public/656b798564d23ac.jpg" width="48"></a>
+                                            <i class="icon icon-bg"></i>
+                                            <i class="icon icon-stat icon-play"></i>
+                                        </div>
+                                        <div class="content">
+                                            <a href="https://site.douban.com/coverpeople/">coverpeople</a>
+                                            <div class="desc">
+                                                流派: 民谣 Folk
+                                                <br>17396人关注
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--集市-->
+            <div id="mgdb-anony-market" class="clearfix">
+                <div class="mgdb-container">
+                    <div class="mgdb-wrapper">
+                        <div class="mgdb-content">
+
+                            <h2>
+                                热门商品 ······
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://market.douban.com?dcs=anonymous-home-more-skus&amp;dcm=douban" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+
+
+                            <div class="list sku-list first">
+                                <div class="main-sku">
+                                    <div class="pic">
+                                        <a href="https://market.douban.com/item/79302/?dcs=anonymous-home-main-sku&amp;dcm=douban">
+                                            <img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p209660.jpg" width="250" height="250">
+                                        </a>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="sku-headline">
+                                            <a href="https://market.douban.com/item/79302/?dcs=anonymous-home-main-sku&amp;dcm=douban" title="桌面置物架">
+                                                <span class="sku-title">
+              桌面置物架
+            </span>
+                                                <span class="sku-price">
+              88.00
+            </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="other-skus">
+                                    <ul>
+                                        <li class="first">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/item/75225/?dcs=anonymous-home-other-sku&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p458880.jpg" width="110" height="110">
+                                                </a>
+                                            </div>
+                                            <div class="footer">
+                                                <a class="title" href="https://market.douban.com/item/75225/?dcs=anonymous-home-other-sku&amp;dcm=douban" title="木马逐风Mazur“三茶六味”牛轧糖礼盒">
+              木马逐风Mazur“三茶六味”牛轧糖礼盒
+            </a>
+                                            </div>
+                                        </li>
+                                        <li class="first">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/item/52070/?dcs=anonymous-home-other-sku&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p270364.jpg" width="110" height="110">
+                                                </a>
+                                            </div>
+                                            <div class="footer">
+                                                <a class="title" href="https://market.douban.com/item/52070/?dcs=anonymous-home-other-sku&amp;dcm=douban" title="多功能U型枕 贴心护颈枕">
+              多功能U型枕 贴心护颈枕
+            </a>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/item/103226/?dcs=anonymous-home-other-sku&amp;dcm=douban">
+                                                    <img src="https://img5.doubanio.com/view/dianpu_product_item/medium/public/p521646.jpg" width="110" height="110">
+                                                </a>
+                                            </div>
+                                            <div class="footer">
+                                                <a class="title" href="https://market.douban.com/item/103226/?dcs=anonymous-home-other-sku&amp;dcm=douban" title="PISN  秋冬羊毛混纺不掉毛超软短款套头加粗长袖毛衣针">
+              PISN  秋冬羊毛混纺不掉毛超软短款套头加粗长袖毛衣针
+            </a>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/item/104751/?dcs=anonymous-home-other-sku&amp;dcm=douban">
+                                                    <img src="https://img1.doubanio.com/view/dianpu_product_item/medium/public/p509169.jpg" width="110" height="110">
+                                                </a>
+                                            </div>
+                                            <div class="footer">
+                                                <a class="title" href="https://market.douban.com/item/104751/?dcs=anonymous-home-other-sku&amp;dcm=douban" title="良朴商务中筒男女袜纯色袜情侣袜  五双混色装">
+              良朴商务中筒男女袜纯色袜情侣袜  五双混色装
+            </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="list sku-list ">
+                                <div class="main-sku">
+                                    <div class="pic">
+                                        <a href="https://market.douban.com/item/58955/?dcs=anonymous-home-main-sku&amp;dcm=douban">
+                                            <img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p377790.jpg" width="250" height="250">
+                                        </a>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="sku-headline">
+                                            <a href="https://market.douban.com/item/58955/?dcs=anonymous-home-main-sku&amp;dcm=douban" title="十四行诗 原味台湾手工黑糖茶 175g 红糖姜茶姜母茶生姜冲绳工艺 黑糖原味">
+                                                <span class="sku-title">
+              十四行诗 原味台湾手工黑糖茶 175g 红糖姜茶姜母茶生姜冲绳工艺 黑糖原味
+            </span>
+                                                <span class="sku-price">
+              43.00
+            </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="other-skus">
+                                    <ul>
+                                        <li class="first">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/item/79302/?dcs=anonymous-home-other-sku&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p209660.jpg" width="110" height="110">
+                                                </a>
+                                            </div>
+                                            <div class="footer">
+                                                <a class="title" href="https://market.douban.com/item/79302/?dcs=anonymous-home-other-sku&amp;dcm=douban" title="桌面置物架">
+              桌面置物架
+            </a>
+                                            </div>
+                                        </li>
+                                        <li class="first">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/item/58955/?dcs=anonymous-home-other-sku&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p377790.jpg" width="110" height="110">
+                                                </a>
+                                            </div>
+                                            <div class="footer">
+                                                <a class="title" href="https://market.douban.com/item/58955/?dcs=anonymous-home-other-sku&amp;dcm=douban" title="十四行诗 原味台湾手工黑糖茶 175g 红糖姜茶姜母茶生姜冲绳工艺 黑糖原味">
+              十四行诗 原味台湾手工黑糖茶 175g 红糖姜茶姜母茶生姜冲绳工艺 黑糖原味
+            </a>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/item/75225/?dcs=anonymous-home-other-sku&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p458880.jpg" width="110" height="110">
+                                                </a>
+                                            </div>
+                                            <div class="footer">
+                                                <a class="title" href="https://market.douban.com/item/75225/?dcs=anonymous-home-other-sku&amp;dcm=douban" title="木马逐风Mazur“三茶六味”牛轧糖礼盒">
+              木马逐风Mazur“三茶六味”牛轧糖礼盒
+            </a>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/item/52070/?dcs=anonymous-home-other-sku&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p270364.jpg" width="110" height="110">
+                                                </a>
+                                            </div>
+                                            <div class="footer">
+                                                <a class="title" href="https://market.douban.com/item/52070/?dcs=anonymous-home-other-sku&amp;dcm=douban" title="多功能U型枕 贴心护颈枕">
+              多功能U型枕 贴心护颈枕
+            </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mgdb-nav">
+                        <h2 class="section-title"><a href="https://market.douban.com?dcs=anonymous-home-sidenav&amp;dcm=douban">市集</a></h2>
+                        <ul>
+                            <li><a class="sidenav-link" href="https://market.douban.com/category/277/?dcs=anonymous-home-sidenav&amp;dcm=douban">美食</a></li>
+                            <li><a class="sidenav-link" href="https://market.douban.com/category/1/?dcs=anonymous-home-sidenav&amp;dcm=douban">服装</a></li>
+                            <li><a class="sidenav-link" href="https://market.douban.com/category/235/?dcs=anonymous-home-sidenav&amp;dcm=douban">配饰</a></li>
+                            <li><a class="sidenav-link" href="https://market.douban.com/category/151/?dcs=anonymous-home-sidenav&amp;dcm=douban">包袋</a></li>
+                            <li><a class="sidenav-link" href="https://market.douban.com/category/256/?dcs=anonymous-home-sidenav&amp;dcm=douban">鞋靴</a></li>
+                            <li><a class="sidenav-link" href="https://market.douban.com/category/115/?dcs=anonymous-home-sidenav&amp;dcm=douban">美容护肤</a></li>
+                            <li><a class="sidenav-link" href="https://market.douban.com/category/35/?dcs=anonymous-home-sidenav&amp;dcm=douban">家居生活</a></li>
+                        </ul>
+                    </div>
+                    <div class="mgdb-aside">
+                        <div class="mod">
+
+                            <h2>
+                                热门店铺 ······
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://market.douban.com?dcs=anonymous-home-more-shops&amp;dcm=douban#hot-shop-wrapper" target="_self">更多</a>
+                ) </span>
+                            </h2>
+
+
+                            <div class="shop-list">
+                                <ul>
+                                    <li class="first">
+                                        <div class="content">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/ericd/?dcs=anonymous-home-hot-shop&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_shop_icon/medium/public/5f1ed6b928e7434.jpg" width="64" alt="ERICD官方旗舰店">
+                                                </a>
+                                            </div>
+                                            <div class="title"><a href="https://market.douban.com/ericd/?dcs=anonymous-home-hot-shop&amp;dcm=douban">ERICD官方旗舰店</a></div>
+                                            <div class="desc">ERICD原创设计以传统服装制作工艺为主导，结合当下最流行的...</div>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="content">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/pisn/?dcs=anonymous-home-hot-shop&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_shop_icon/medium/public/9d03efbf705887d.jpg" width="64" alt="PISN">
+                                                </a>
+                                            </div>
+                                            <div class="title"><a href="https://market.douban.com/pisn/?dcs=anonymous-home-hot-shop&amp;dcm=douban">PISN</a></div>
+                                            <div class="desc">17春季即将上新，注意关注偶</div>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="content">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/nanazhome/?dcs=anonymous-home-hot-shop&amp;dcm=douban">
+                                                    <img src="https://img5.doubanio.com/view/dianpu_shop_icon/medium/public/169b1b76356f636.jpg" width="64" alt="Nanaz 家居百货">
+                                                </a>
+                                            </div>
+                                            <div class="title"><a href="https://market.douban.com/nanazhome/?dcs=anonymous-home-hot-shop&amp;dcm=douban">Nanaz 家居百货</a></div>
+                                            <div class="desc">不用装修，NaNaZ home 也能你家变得更美一些。</div>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div class="content">
+                                            <div class="pic">
+                                                <a href="https://market.douban.com/huangxiaojie/?dcs=anonymous-home-hot-shop&amp;dcm=douban">
+                                                    <img src="https://img3.doubanio.com/view/dianpu_shop_icon/medium/public/7f37444b0a6a0e2.jpg" width="64" alt="黄小姐">
+                                                </a>
+                                            </div>
+                                            <div class="title"><a href="https://market.douban.com/huangxiaojie/?dcs=anonymous-home-hot-shop&amp;dcm=douban">黄小姐</a></div>
+                                            <div class="desc">卖我会穿的打底，做你会爱的姑娘</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--同城-->
+            <div id="mgdb-anony-events" class="clearfix">
+                <div class="mgdb-container">
+                    <div class="mgdb-wrapper">
+                        <div class="mgdb-content">
+
+
+                            <h2>
+                                北京 · 本周热门活动 ······
+                                <span class="pl">&nbsp;(
+                
+                    <a href="https://www.douban.com/location/" target="_self">更多</a>）
+                            </h2>
+
+                            <div class="events-list list">
+                                <ul>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/event/28080222/">
+                                                <img data-origin="https://img1.doubanio.com/view/event_poster/small/public/121957ce0c4399a.jpg" src="https://img1.doubanio.com/view/event_poster/small/public/121957ce0c4399a.jpg" width="70">
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/event/28080222/" title=" 想变女神?光有好人品可不够，魅力形象沙龙打造你的好衣品">
+             想变女神?光有好人品可不够，魅力形象沙龙打造你的好...
+          </a>
+                                            </div>
+                                            <div class="datetime">
+                                                1月21日 周六 - 2月28日 周二
+                                            </div>
+                                            <address title="北京市东城区新世界百货太华公寓1座1510">
+          北京市东城区新世界百货太...
+        </address>
+                                            <div class="follow">
+                                                104人关注
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/event/28115494/">
+                                                <img data-origin="https://img1.doubanio.com/view/event_poster/small/public/78b4c0de22e86c7.jpg" src="https://img1.doubanio.com/view/event_poster/small/public/78b4c0de22e86c7.jpg" width="70">
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/event/28115494/" title="解决“假性单亲家庭”亲子困境线下讲座">
+            解决“假性单亲家庭”亲子困境线下讲座
+          </a>
+                                            </div>
+                                            <div class="datetime">
+                                                2月20日 周一 10:30 - 17:00
+                                            </div>
+                                            <address title="天通苑六区19号（昆钰儿科门诊）">
+          天通苑六区19号（昆钰儿科...
+        </address>
+                                            <div class="follow">
+                                                4人关注
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pic">
+                                            <a href="https://www.douban.com/event/28163903/">
+                                                <img data-origin="https://img1.doubanio.com/view/event_poster/small/public/dfda724bf98f36a.jpg" src="https://img1.doubanio.com/view/event_poster/small/public/dfda724bf98f36a.jpg" width="70">
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <a href="https://www.douban.com/event/28163903/" title="2017首都剧场精品剧目邀请展演话剧：赖声川导演戏剧作品《海鸥》（主演：剧雪、孙强等）">
+            2017首都剧场精品剧目邀请展演话剧：赖声川导演戏剧作...
+              <span class="title-badge title-tickets-badge">正在售票</span>
+                                </a>
+                        </div>
+                        <div class="datetime">
+                            3月18日 周六 - 3月19日 周日
+                        </div>
+                        <address title="首都剧场">
+          首都剧场
+        </address>
+                        <div class="follow">
+                            2人关注
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <a href="https://www.douban.com/event/28141286/">
+                                <img data-origin="https://img1.doubanio.com/view/event_poster/small/public/1dd8d0f80742fcb.jpg" src="https://img1.doubanio.com/view/event_poster/small/public/1dd8d0f80742fcb.jpg" width="70">
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <a href="https://www.douban.com/event/28141286/" title="2017第四届城市戏剧节 乌镇戏剧节五星推荐 • 香港绿叶剧团肢体剧《孤儿2.0》">
+            2017第四届城市戏剧节 乌镇戏剧节五星推荐 • 香港...
+              <span class="title-badge title-tickets-badge">正在售票</span>
+          </a>
+                            </div>
+                            <div class="datetime">
+                                4月28日 周五 - 4月30日 周日
+                            </div>
+                            <address title="中华世纪坛">
+          中华世纪坛
+        </address>
+                            <div class="follow">
+                                0人关注
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mgdb-nav">
+            <h2 class="section-title"><a href="https://www.douban.com/location/">同城</a></h2>
+
+
+            <div class="side-links nav-anon">
+                <ul>
+
+
+
+                    <li>
+                        <a href="https://beijing.douban.com/events">近期活动</a>
+                    </li>
+
+                    <li>
+                        <a href="https://beijing.douban.com/hosts">主办方</a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.douban.com/location/drama/">舞台剧</a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="apps-list">
+                <ul>
+                </ul>
+            </div>
+
+        </div>
+        <div class="mgdb-aside">
+
+            <div class="mod">
+
+                <h2>
+                    活动标签 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                </h2>
+
+                <div class="cate events-cate">
+                    <ul>
+                        <li class="cate-label"><a href="https://www.douban.com/location/beijing/events/week-music">音乐»</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1001">小型现场</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1002">音乐会</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1003">演唱会</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1004">音乐节</a></li>
+                    </ul>
+                </div>
+                <div class="cate events-cate">
+                    <ul>
+                        <li class="cate-label"><a href="https://www.douban.com/location/beijing/events/week-drama">戏剧»</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1101">话剧</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1102">音乐剧</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1103">舞剧</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1104">歌剧</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1105">戏曲</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1106">其他</a></li>
+                    </ul>
+                </div>
+                <div class="cate events-cate">
+                    <ul>
+                        <li class="cate-label"><a href="https://www.douban.com/location/beijing/events/week-party">聚会»</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1401">生活</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1402">集市</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1403">摄影</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1404">外语</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1405">桌游</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1406">夜店</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1407">交友</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1408">美食</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1409">派对</a></li>
+                    </ul>
+                </div>
+                <div class="cate events-cate">
+                    <ul>
+                        <li class="cate-label"><a href="https://www.douban.com/location/beijing/events/week-film">电影»</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1801">主题放映</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1802">影展</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-1803">影院活动</a></li>
+                    </ul>
+                </div>
+                <div class="cate events-cate">
+                    <ul>
+                        <li class="cate-label"><a href="https://www.douban.com/location/beijing/events/week-all">其他»</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-salon">讲座</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-exhibition">展览</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-sports">运动</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-travel">旅行</a></li>
+                        <li><a href="https://www.douban.com/location/beijing/events/week-commonweal">公益</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!--版权声明-->
+    <footer id="mgdb-footer">
+        <div id="ft">
+
+
+            <span id="icp" class="fleft gray-link">
+    © 2005－2017 douban.com, all rights reserved 北京豆网科技有限公司
+  <br>
+  <a href="http://www.miibeian.gov.cn/">京ICP证090015号</a> 京ICP备11027288号 网络视听许可证<a href="https://www.douban.com/about?topic=licence" target="_blank">0110418</a>号
+  <br>京网文[2015]2026-368号 <img src="https://img3.doubanio.com/pics/biaoshi.gif" align="absmiddle"> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502000728">京公网安备11010502000728</a>&nbsp;&nbsp;新出网证(京)字129号
+  <br>违法和不良信息举报电话：4008353331&nbsp;<img src="https://img3.doubanio.com/img/files/file-1423193113.png" height="16" align="top">
+  <br><img src="https://img3.doubanio.com/pics/icon/jubao.png" align="absmiddle" width="15px"> <a href="http://www.12377.cn/">中国互联网举报中心</a> 电话：12377 <a href="https://img1.doubanio.com/img/files/file-1478594087.jpg">《食品流通许可证》许可证：SP1101051510347287</a>
+</span>
+
+            <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+            <span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="https://help.douban.com/?app=main" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+        </div>
+    </footer>
+</body>
+
+</html>

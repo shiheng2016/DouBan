@@ -1,0 +1,837 @@
+/*==============================================================
+    main.css
+==============================================================*/
+
+
+/*  header.css Start
+==============================================================*/
+
+#mgdb-header {
+    padding: 30px 100px;
+}
+
+#mgdb-header .mgdb-container {
+    overflow: hidden;
+}
+
+#mgdb-header .mgdb-wrapper {
+    float: left;
+}
+
+#mgdb-header .mgdb-nav {
+    width: 180px;
+    float: left;
+    margin-left: -100%;
+}
+
+#mgdb-header .mgdb-aside {
+    width: 450px;
+    float: left;
+    margin-left: -500px;
+}
+
+#mgdb-header .mgdb-content {
+    margin: 0 450px 0 180px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 270px;
+    height: 30px;
+    border: 1px solid #c3c3c3;
+}
+
+#mgdb-header #mgdb-header-logo h1 {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 160px;
+    height: 34px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    background: url("https://img3.doubanio.com/f/sns/19886d443852bee48de2ed91f4a3bdfdaf8c809c/pics/nav/logo_db.png") no-repeat 0 0;
+    overflow: hidden;
+}
+
+#mgdb-header #mgdb-header-logo h1 a {
+    background: transparent;
+    display: block;
+    height: 34px;
+    line-height: 10em;
+}
+
+#mgdb-header #mgdb-header-search input {
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+#mgdb-header #mgdb-header-search #mgdb-header-search-wrapper {
+    /*position: relative;*/
+    display: inline-block;
+    margin: 0 auto;
+    zoom: 1;
+    vertical-align: middle;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #c3c3c3;
+}
+
+#mgdb-header #mgdb-header-search .inp input {
+    width: 96%;
+    border: none;
+    font-size: 13px;
+    height: 20px;
+    padding: 5px;
+}
+
+#mgdb-header #mgdb-header-search .bn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(../images/bn_srh_1.png) 50% 50% no-repeat;
+}
+
+#mgdb-header #mgdb-header-search .bn input {
+    border: none;
+    background: transparent;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+}
+
+#mgdb-header #mgdb-header-menu a {
+    display: inline-block;
+    zoom: 1;
+    width: 40px;
+    height: 20px;
+    overflow: hidden;
+    margin: 0;
+    line-height: 20em;
+    outline: none;
+    vertical-align: middle;
+    background: transparent url(../images/anony_nav_logo.png) no-repeat 100% 100%;
+    background-image: -webkit-image-set(url(../images/anony_nav_logo.png) 1x, url(../images/anony_nav_logo@2x.png) 2x);
+    background-image: -moz-image-set(url(../images/anony_nav_logo.png) 1x, url(../images/anony_nav_logo@2x.png) 2x);
+    background-image: -ms-image-set(url(../images/anony_nav_logo.png) 1x, url(../images/anony_nav_logo@2x.png) 2x);
+    background-image: -o-image-set(url(../images/anony_nav_logo.png) 1x, url(../images/anony_nav_logo@2x.png) 2x);
+    background-size: cover;
+}
+
+#mgdb-header #mgdb-header-menu .lnk-book {
+    background-position: 0 0;
+}
+
+#mgdb-header #mgdb-header-menu .lnk-movie {
+    background-position: -60px 0;
+}
+
+#mgdb-header #mgdb-header-menu .lnk-music {
+    background-position: -120px 0;
+}
+
+#mgdb-header #mgdb-header-menu .lnk-group {
+    background-position: -180px 0;
+}
+
+#mgdb-header #mgdb-header-menu .lnk-events {
+    background-position: -299px 0;
+}
+
+#mgdb-header #mgdb-header-menu .lnk-fm {
+    background-position: -241px 0;
+}
+
+#mgdb-header #mgdb-header-menu .lnk-dongxi {
+    background-position: -359px 0;
+}
+
+#mgdb-header #mgdb-header-menu .lnk-market {
+    width: 42px;
+    background-position: -421px 0;
+}
+
+
+/*  header.css End
+==============================================================*/
+
+
+/*  anony.css Start
+==============================================================*/
+
+#mgdb-anony {
+    margin-bottom: 25px;
+    background: url("../images/doubanapp4_bg.png") no-repeat top right;
+}
+
+#mgdb-anony .mgdb-anony-wrapper {
+    position: relative;
+    width: 950px;
+    height: 145px;
+    margin: 0 auto;
+    padding: 28px 0 4px;
+    overflow: visible;
+}
+
+#mgdb-anony .mgdb-anony-wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#mgdb-anony .mgdb-anony-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-image: url("../images/doubanapp4.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+#mgdb-anony .login {
+    float: right;
+    position: relative;
+    width: 270px;
+    margin-bottom: 15px;
+}
+
+#mgdb-anony .mgdb-anony-wrapper form fieldset {
+    border: none;
+}
+
+#mgdb-anony input[type*="text"] {
+    width: 252px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    border: 1px solid #dbe5db;
+    border-radius: 2px;
+    padding: 0 8px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+#mgdb-anony input[type*="password"] {
+    width: 220px;
+    height: 30px;
+    vertical-align: middle;
+    border: none;
+}
+
+#mgdb-anony .item-passwd {
+    position: relative;
+    border: 1px solid #DBE5DB !important;
+    border-radius: 2px;
+    background: #fff;
+    padding: 0 8px;
+    margin: 5px;
+}
+
+#mgdb-anony .item-passwd .opt {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+#mgdb-anony .item-passwd .opt a {
+    color: #ccc;
+    font-size: 12px;
+    line-height: 31px;
+}
+
+#mgdb-anony .item-passwd .opt a:hover {
+    color: #999 !important;
+    background: none;
+    ;
+}
+
+#mgdb-anony .item-submit {
+    margin-top: 6px;
+    margin-bottom: 4px;
+    font-size: 0;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+#mgdb-anony .item-submit .bn-submit {
+    padding: 0 22px;
+    margin-right: 0;
+    height: 30px;
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #30A080;
+    border-color: #30A080;
+    color: #fff;
+    width: 89px;
+    box-sizing: content-box;
+}
+
+#mgdb-anony .item-submit .lnk-reg {
+    color: #30a080;
+    background: transparent;
+    display: inline-block;
+    zoom: 1;
+    padding: 8px 21px 7px;
+    vertical-align: top;
+    border-radius: 2px;
+    border: 1px solid #30A080;
+    font-size: 12px;
+    color: #30A080;
+    line-height: 1;
+    width: 89px;
+    text-align: center;
+    margin-left: 4px;
+}
+
+#mgdb-anony .item-submit .lnk-reg:hover {
+    color: #2a8c70 !important;
+}
+
+#mgdb-anony .login .item-action {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+#mgdb-anony .login .item-action label {
+    vertical-align: middle;
+}
+
+#mgdb-anony .login .item-action input {
+    margin-left: 3px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+#mgdb-anony .login .item-action-third {
+    float: right;
+    font-size: 0;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+#mgdb-anony .login .item-action-third a::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+#mgdb-anony .login .item-action-third li {
+    display: inline-block;
+}
+
+#mgdb-anony .login .item-action-third li:nth-child(2) {
+    margin-left: 8px;
+}
+
+#mgdb-anony .login .wechat::before {
+    background: url("../images/wechat.png");
+}
+
+#mgdb-anony .login .weibo::before {
+    background: url("../images/weibo.png");
+}
+
+#mgdb-anony .app {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 430px;
+    height: 120px;
+}
+
+#mgdb-anony .app .app-title {
+    margin: 7px 0;
+    font-size: 25px;
+    color: #111;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+#mgdb-anony .app .app-title span {
+    color: #111;
+    margin-left: 10px;
+    font-weight: 100;
+}
+
+#mgdb-anony .app .app-slogan {
+    font-size: 12px;
+    color: #111;
+    text-align: justify;
+}
+
+#mgdb-anony .app .app-slogan::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+#mgdb-anony .app .lnk-app {
+    background: #00B51D;
+    color: #FFF;
+    display: inline-block;
+    zoom: 1;
+    padding: 9px 21px;
+    margin-right: 2px;
+    vertical-align: top;
+    border-radius: 2px;
+    font-size: 12px;
+    background: #00B51D;
+    color: #FFF;
+    line-height: 1;
+}
+
+#mgdb-anony .app .app-qr {
+    display: inline-block;
+    zoom: 1;
+    position: relative;
+}
+
+#mgdb-anony .app .app-qr:hover .app-qr-expand {
+    display: block;
+}
+
+#mgdb-anony .app .app-qr .app-qr-expand {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 20px 5px;
+    border: 1px solid #4a480d;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    background: #fff;
+    line-height: 13px;
+    white-space: nowrap;
+}
+
+
+/*  anony.css End
+==============================================================*/
+
+
+/*  hotpush.css Start
+==============================================================*/
+
+#mgdb-anony-hotpush {
+    padding: 10px 0;
+    margin-bottom: 30px;
+    min-height: 200px;
+}
+
+#mgdb-anony-hotpush .mgdb-anony-hotpush-wrapper {
+    width: 950px;
+    margin: 0 auto;
+}
+
+#mgdb-anony-hotpush .mgdb-push-main .albums {
+    float: left;
+    width: 350px;
+    margin-right: 30px;
+    font-size: 0;
+    color: #999;
+}
+
+#mgdb-anony-hotpush .mgdb-anony-hotpush-wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#mgdb-anony-hotpush .mgdb-push-main .albums ul {
+    margin: -10px 0 0 -10px;
+}
+
+#mgdb-anony-hotpush .mgdb-push-main .albums li {
+    display: inline-block;
+    width: 170px;
+    vertical-align: top;
+    font-size: 12px;
+    margin: 10px 0 0 10px;
+}
+
+#mgdb-anony-hotpush .mgdb-push-main .notes ul {
+    overflow: hidden;
+}
+
+#mgdb-anony-hotpush .mgdb-push-main .notes li:first-child {
+    margin-top: 0px;
+}
+
+#mgdb-anony-hotpush .mgdb-push-aside {
+    float: right;
+    width: 265px;
+    margin-left: 30px;
+}
+
+
+/*  hotpush.css End
+==============================================================*/
+
+
+/*  content.css Start
+==============================================================*/
+
+#mgdb-anony-movie {
+    background: #f7f7f7;
+}
+
+#mgdb-anony-movie li a {
+    color: #27a;
+}
+
+#mgdb-anony-group li a:link {
+    color: #017a85;
+}
+
+#mgdb-anony-book li a:link {
+    color: #614e3c;
+}
+
+#mgdb-anony-music li a:link {
+    color: #555d53;
+}
+
+#mgdb-anony-market li a:link {
+    color: #343434;
+}
+
+#mgdb-anony-events li a:link {
+    color: #643;
+}
+
+
+/*=============== movie =================*/
+
+#mgdb-anony-movie {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#mgdb-anony-movie .mgdb-content {
+    height: 100%;
+    /*overflow: hidden;*/
+    float: left;
+}
+
+#mgdb-anony-movie .mgdb-content img {
+    width: 100px;
+    height: 150px;
+}
+
+#mgdb-anony-movie .mgdb-content ul {
+    margin-top: -40px;
+}
+
+#mgdb-anony-movie .mgdb-content li {
+    width: 130px;
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+#mgdb-anony-movie .mgdb-content .pic {
+    height: 145px;
+}
+
+#mgdb-anony-movie .mgdb-content .bn-link {
+    background: #1c8bd0;
+    color: #fff;
+}
+
+#mgdb-anony-movie .mgdb-aside ol li {
+    display: block;
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#mgdb-anony-movie .mgdb-aside .mod {
+    margin-bottom: 20px;
+}
+
+
+/*=============== group =================*/
+
+#mgdb-anony-group .mgdb-content li {
+    margin: 30px 0 0 30px;
+    width: 248px;
+    color: #999;
+    font-size: 12px;
+    text-align: left;
+    /*float: left;*/
+    display: inline-block;
+}
+
+#mgdb-anony-group .mgdb-content .pic {
+    text-align: left;
+    float: left;
+}
+
+#mgdb-anony-group .mgdb-content img {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+}
+
+#mgdb-anony-group .mgdb-content .title {
+    margin-bottom: 5px;
+}
+
+
+/*=============== book =================*/
+
+#mgdb-anony-book .mgdb-content img {
+    width: 100px;
+    height: 150px;
+}
+
+#mgdb-anony-book .mgdb-content li {
+    display: inline-block;
+    width: 140px;
+}
+
+#mgdb-anony-book .mgdb-content .bn-link {
+    background: #999a95;
+    color: #fff;
+}
+
+#mgdb-anony-book .mgdb-content .mod {
+    margin-bottom: 30px;
+}
+
+#mgdb-anony-book .mgdb-nav li {
+    position: relative;
+}
+
+#mgdb-anony-book .mgdb-aside .book-cate {
+    padding: 10px;
+    margin: -1px 0 10px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+
+/*=============== music =================*/
+
+#mgdb-anony-music .mgdb-content li {
+    display: inline-block;
+    text-align: center;
+    width: 24%;
+    height: 130px;
+    vertical-align: top;
+    margin-top: 50px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+#mgdb-anony-music .mgdb-content .pic {
+    height: 90px;
+}
+
+#mgdb-anony-music .mgdb-content ul {
+    margin-top: -40px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#mgdb-anony-music .title {
+    font-size: 12px;
+    color: #555d53;
+}
+
+#mgdb-anony-music .mgdb-aside li {
+    float: left;
+    display: block;
+}
+
+
+/*=============== market =================*/
+
+#mgdb-anony-market .mgdb-content .sku-list .first {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#mgdb-anony-market .mgdb-content .main-sku {
+    float: left;
+}
+
+#mgdb-anony-market .mgdb-content .other-skus ul {
+    float: left;
+    width: 260px;
+    overflow: hidden;
+    vertical-align: top;
+    margin-top: -40px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+#mgdb-anony-market .mgdb-content .other-skus li {
+    width: 110px;
+    height: 125px;
+    margin-top: 15px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+#mgdb-anony-market .mgdb-content .other-skus .footer a {
+    font-size: 12px;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 7px;
+}
+
+#mgdb-anony-market .mgdb-content .sku-headline {
+    line-height: 20px;
+    font-size: 14px;
+    width: 250px;
+    margin-top: 5px;
+}
+
+#mgdb-anony-market .mgdb-content .sku-headline .sku-title {
+    text-align: left;
+    float: left;
+    overflow: hidden;
+    max-width: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#mgdb-anony-market .mgdb-content .sku-headline a {
+    color: #669 !important;
+}
+
+#mgdb-anony-market .mgdb-content .sku-headline .sku-price {
+    text-align: right;
+    float: right;
+}
+
+#mgdb-anony-market .mgdb-content .other-skus .first {
+    margin-top: 40px;
+}
+
+#mgdb-anony-market .mgdb-content .footer {
+    display: inline-block;
+    padding: 3px 0;
+}
+
+#mgdb-anony-market .mgdb-content .other-skus .footer {
+    width: 110px;
+}
+
+#mgdb-anony-market .mgdb-content .other-skus img {
+    width: 110px;
+    height: 110px;
+}
+
+#mgdb-anony-market .mgdb-content li {
+    width: 100px;
+}
+
+#mgdb-anony-market .mgdb-aside .title {
+    margin-left: 30px;
+}
+
+#mgdb-anony-market .mgdb-aside li {
+    float: left;
+    width: 280px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#mgdb-anony-market .mgdb-aside li .pic {
+    float: left;
+    margin-right: 20px;
+}
+
+#mgdb-anony-market .mgdb-aside li .desc {
+    color: #6a6a6a;
+    font-size: 12px;
+}
+
+
+/*=============== events =================*/
+
+#mgdb-anony-events .mgdb-content .pic {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#mgdb-anony-events .mgdb-content li {
+    width: 248px;
+    height: 120px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-align: left;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.62;
+    text-align: left;
+}
+
+#mgdb-anony-events .mgdb-content li .info {
+    color: #999;
+}
+
+
+/*  content.css End
+==============================================================*/
+
+
+/*  footer.css Start
+==============================================================*/
+
+footer {
+    font-size: 11px;
+    margin: 20px 100px;
+    position: relative;
+}
+
+footer fleft {
+    /*float: left;*/
+    width: 50%;
+    display: inline-block;
+}
+
+footer .fright {
+    /*float: right;*/
+    width: 40%;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+
+/*  footer.css End
+==============================================================*/

@@ -1,0 +1,360 @@
+/*==============================================================
+    common.css
+==============================================================*/
+
+
+/*  normalize.css Start
+==============================================================*/
+
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    line-height: 1.62;
+}
+
+html {
+    color: #111;
+    background: #fff;
+}
+
+body {
+    font-size: 12px;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: #2d374b;
+    text-decoration: none;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+a:visited {
+    color: #669;
+    text-decoration: none;
+}
+
+a:link {
+    color: #37a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff !important;
+    text-decoration: none;
+    background: #37a;
+}
+
+em {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+    margin-top: 5px;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+h2 {
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+
+input:focus {
+    outline: none;
+}
+
+#mgdb-anony-movie,
+#mgdb-anony-group,
+#mgdb-anony-book,
+#mgdb-anony-music,
+#mgdb-anony-market,
+#mgdb-anony-events {
+    padding: 30px 100px;
+    background: #f7f7f7;
+}
+
+#mgdb-anony-group,
+#mgdb-anony-music,
+#mgdb-anony-events {
+    background: #fff;
+}
+
+
+/*  normalize.css End
+==============================================================*/
+
+
+/*  commonContent.css Start
+==============================================================*/
+
+
+/*颜色类*/
+
+
+/*全局灰色文字*/
+
+.cate-label,
+.gray {
+    color: #999;
+}
+
+
+/*文字“更多”*/
+
+.more {
+    color: #27a;
+}
+
+.author {
+    font-size: 12px;
+    color: #111;
+}
+
+.artist {
+    font-size: 12px;
+    color: #555d53;
+}
+
+.price {
+    font-size: 12px;
+    color: #666;
+}
+
+.rating {
+    margin-bottom: 4px;
+}
+
+.list {
+    font-size: 0;
+    letter-spacing: -.31em;
+}
+
+i {
+    font-size: 12px;
+    margin-left: 4px;
+    color: #e09015;
+}
+
+
+/*灰色背景*/
+
+.mgdb-background {
+    background-color: #f7f7f7;
+}
+
+
+/*雪碧图*/
+
+.app-icon {
+    display: block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: url("../images/app_icons_50_10.jpg") no-repeat;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 2px #999;
+    -moz-box-shadow: 1px 1px 2px #999;
+    box-shadow: 1px 1px 2px #999;
+}
+
+.app-icon-fm {
+    background-position: -250px 0;
+}
+
+.app-icon-artists {
+    background-position: -50px;
+}
+
+
+/*    公共样式
+=====================================================*/
+
+.clearfix {
+    overflow: hidden;
+}
+
+.pic {
+    overflow: hidden;
+    text-align: center;
+}
+
+.pic a:hover {
+    color: #fff;
+}
+
+.bn-link {
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 10px;
+    vertical-align: middle;
+    border-radius: 3px;
+    line-height: 24px;
+}
+
+.mgdb-content .title {
+    font-size: 13px;
+    margin-bottom: 5px;
+    line-height: 1.45;
+    word-wrap: break-word;
+}
+
+.mgdb-aside li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.mgdb-aside ul {
+    margin-left: -10px;
+}
+
+.mgdb-aside-wrapper {
+    padding-top: 10px;
+    margin: -1px 0 10px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+
+/*导航栏标题文字*/
+
+.mgdb-nav h2 {
+    font-size: 24px;
+    line-height: 150%;
+}
+
+
+/*导航栏列表文字*/
+
+.mgdb-nav li {
+    font-size: 14px;
+    line-height: 1.62;
+    text-align: left;
+}
+
+
+/*有侧边栏列表文字*/
+
+.mgdb-aside li {
+    font-size: 12px;
+    line-height: 1.62;
+}
+
+.mgdb-content {
+    /*min-width: 500px;*/
+}
+
+.mgdb-content ul {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.mgdb-content li {
+    float: left;
+}
+
+#mgdb-anony-content {
+    width: 100%;
+    padding: auto 30px;
+}
+
+header,
+footer,
+.mgdb-container {
+    min-width: 1000px;
+}
+
+
+/*===========================================================
+    双飞翼布局相关类
+===========================================================*/
+
+
+/*父容器*/
+
+.mgdb-container {
+    overflow: hidden;
+    color: #fff;
+    /*padding: 20px 50px;*/
+}
+
+
+/*左侧导航*/
+
+.mgdb-nav {
+    width: 100px;
+    float: left;
+    margin-left: -100%;
+}
+
+
+/*中间内容包裹容器*/
+
+.mgdb-wrapper {
+    width: 100%;
+    float: left;
+}
+
+
+/*内容*/
+
+.mgdb-content {
+    margin: 0 265px 0 100px;
+}
+
+
+/*右边栏*/
+
+.mgdb-aside {
+    width: 265px;
+    float: left;
+    margin-left: -265px;
+}
+
+
+/*  commonContent.css End
+==============================================================*/

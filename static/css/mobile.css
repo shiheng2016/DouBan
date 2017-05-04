@@ -1,0 +1,731 @@
+/*=============================================================
+*                         mobile.css
+=============================================================*/
+
+
+/*==================  normalize.css Start  ===================*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    min-width: 308px;
+}
+
+a {
+    font-size: 15px;
+    color: #111;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h3 {
+    font-size: 17px;
+    color: #494949;
+}
+
+#mgdb-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0 18px;
+    padding-top: 57px;
+}
+
+.green-link {
+    color: #42bd56;
+    font-size: 17px;
+}
+
+
+/*==================  normalize.css End  ===================*/
+
+
+/*==================  main.css Start  ======================*/
+
+
+/*================================================================
+ *                          header                              *
+ ================================================================*/
+
+#mgdb-header {
+    padding: 5px 18px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #f3f3f3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#mgdb-header .logo {
+    height: 22px;
+    width: 46px;
+    font-size: 0;
+    background: url("../images/douban_mobile.png") no-repeat top left;
+    background-size: cover;
+}
+
+#mgdb-header .menu {
+    flex-grow: 1;
+    align-items: center;
+}
+
+#mgdb-header .menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 15px;
+    font-size: 15px;
+    line-height: 47px;
+}
+
+#mgdb-header .menu li {
+    margin: 0 8px;
+}
+
+#mgdb-header .menu ul>li a:hover {
+    background: none;
+    color: initial;
+}
+
+#mgdb-header .menu .more {
+    width: 25px;
+    height: 22px;
+    font-size: 0;
+    background: url("../images/more.png") no-repeat top left;
+    background-position: 0 4px;
+    background-size: contain;
+}
+
+#mgdb-header .menu .movie {
+    color: rgb(35, 132, 232);
+}
+
+#mgdb-header .menu .book {
+    color: rgb(159, 120, 96);
+}
+
+#mgdb-header .menu .broad {
+    color: rgb(228, 168, 19);
+}
+
+#mgdb-header .menu .group {
+    color: rgb(42, 184, 204);
+}
+
+
+/*================================================================
+ *                          content                              *
+ ================================================================*/
+
+
+/*======================= mobile.html Start======================*/
+
+
+/*========================== navigation =========================*/
+
+#mgdb-page .nav {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#mgdb-page .nav ul {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+#mgdb-page .nav li {
+    display: block;
+    padding: 5px;
+    color: #494949;
+    background: #f6f6f6;
+    text-align: center;
+    flex-basis: 45%;
+    line-height: 34px
+}
+
+
+/*========================== news =============================*/
+
+#mgdb-page .news,
+#mgdb-page .news .wrapper,
+#mgdb-page .wrapper .item,
+#mgdb-page .item .content {
+    width: 100%;
+    height: 100%;
+}
+
+#mgdb-page .news .wrapper .item {
+    position: relative;
+    display: block;
+    width: auto;
+    padding: 20px 10px;
+    color: #494949;
+}
+
+#mgdb-page .news .wrapper .item::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: #e3e3e3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#mgdb-page .news .wrapper a:first-child::before {
+    content: none;
+}
+
+#mgdb-page .news .item img {
+    width: 25.6%;
+    height: 25.6%;
+    max-width: 100px;
+    margin-left: 35px;
+    float: right;
+}
+
+#mgdb-page .news .item h3 {
+    font-weight: 500;
+    line-height: 1.41;
+    margin-top: 6px;
+    /*display: inline-block;*/
+    /*float: right;*/
+}
+
+#mgdb-page .news .item p {
+    font-size: 12px;
+    color: #aaa;
+}
+
+#mgdb-page .news .item .item-footer {
+    /*float: right;*/
+    overflow: hidden;
+    clear: both;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+#mgdb-page .news .item .author {
+    display: inline-block;
+}
+
+#mgdb-page .news .item .label {
+    float: right;
+}
+
+
+/*====================== mobile.html End ======================*/
+
+
+/*=============== mobile-hotmovie.html Start ==================*/
+
+#mgdb-page .hotmovie {
+    padding: 5px;
+}
+
+#mgdb-page .hotmovie h1 {
+    font-size: 24px;
+    font-weight: normal;
+    padding: 5px 0;
+}
+
+#mgdb-page .hotmovie .wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+#mgdb-page .hotmovie .item {
+    width: 100%;
+    max-width: 100px;
+    padding: 5px 3px;
+    text-align: center;
+    /*flex-grow: 3;*/
+    flex-basis: 30%;
+}
+
+#mgdb-page .hotmovie .item img {
+    width: 100%;
+    display: block;
+}
+
+#mgdb-page .hotmovie h3 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #494949;
+    padding-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#mgdb-page .hotmovie .item .star-full {
+    background: url("../images/full-star.png") no-repeat center center;
+    background-size: cover;
+    margin-right: 1px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+#mgdb-page .hotmovie .item .star-gray {
+    background: url("../images/gray-star.png") no-repeat center center;
+    background-size: cover;
+    margin-right: 1px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+
+/*================ mobile-hotmovie.html End ===================*/
+
+
+/*=============== mobile-beautyview.html Start ==================*/
+
+#mgdb-page .beautyview .banner {
+    min-height: 160px;
+    box-sizing: border-box;
+    padding: 30px;
+    color: #fff;
+    background: url("../images/file-1487314290.jpg") no-repeat center/cover;
+    text-align: center;
+    margin: 0 -18px;
+}
+
+#mgdb-page .beautyview .banner .title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#mgdb-page .beautyview .banner .info {
+    font-size: 12px;
+    line-height: 1;
+    margin: 10px 0;
+}
+
+#mgdb-page .beautyview .banner .descript {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#mgdb-page .beautyview .login {
+    position: relative;
+    margin: 0 auto 5px;
+    padding: 10px 18px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#mgdb-page .beautyview .login .avator {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+#mgdb-page .beautyview .login .avator img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#mgdb-page .beautyview .login .holder {
+    color: #aaa;
+    padding-left: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    float: left;
+}
+
+#mgdb-page .beautyview .login .icon-camera {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    padding: 8px;
+    float: right;
+    box-sizing: border-box;
+}
+
+#mgdb-page .beautyview .login .icon-pen {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    padding: 8px;
+    float: right;
+    box-sizing: border-box;
+}
+
+#mgdb-page .beautyview .login .icon-camera::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: url("../images/ic_status_camera.svg") no-repeat center/contain;
+}
+
+#mgdb-page .beautyview .login .icon-pen::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: url("../images/ic_status_pen.svg") no-repeat center/contain;
+}
+
+#mgdb-page .beautyview h2 {
+    color: #aaa;
+    margin: 0 0 15px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#mgdb-page .beautyview .comment-list li {
+    position: relative;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 50px;
+}
+
+#mgdb-page .beautyview .comment-list li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #e8e8e8;
+}
+
+#mgdb-page .beautyview .comment-list li .cont {
+    padding-left: 0;
+    margin-top: 10px;
+    line-height: 22px;
+    color: #494949;
+    font-size: 17px;
+}
+
+#mgdb-page .beautyview .comment-list h2 {
+    padding-top: 24px;
+}
+
+#mgdb-page .beautyview .desc {
+    margin-left: -50px;
+    margin-bottom: 11px;
+    font-size: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#mgdb-page .beautyview .desc img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#mgdb-page .beautyview .hotbc .feed-img {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+#mgdb-page .beautyview .hotbc .feed-img img {
+    max-width: 45%;
+    flex-basis: 40%;
+    margin-left: 2px;
+}
+
+#mgdb-page .beautyview .comment-list .first {
+    margin-top: 15px;
+    display: inline-block;
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#mgdb-page .beautyview .comment-list .first img {
+    /*width: 100%;*/
+}
+
+#mgdb-page .beautyview .comment-list .info {
+    margin-top: 13px;
+    overflow: auto;
+}
+
+#mgdb-page .beautyview .comment-list .info span {
+    color: #ccc;
+    margin-left: 3px;
+    position: relative;
+    left: 0;
+    top: -3px;
+}
+
+#mgdb-page .beautyview .comment-list .info div[class*="btn"] {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+#mgdb-page .beautyview .comment-list .info .btn-like::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 -2px;
+    background: url("../images/ic_like_gray.svg") no-repeat center/cover;
+}
+
+#mgdb-page .beautyview .comment-list .info .btn-comment::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 -2px;
+    background: url("../images/ic_comment.svg") no-repeat center/cover;
+}
+
+#mgdb-page .beautyview .comment-list .info .btn-retweet::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 -2px;
+    background: url("../images/ic_retweet_gray.svg") no-repeat center/cover;
+}
+
+#mgdb-page .beautyview .comment-list .info .btn-more {
+    float: right;
+}
+
+#mgdb-page .beautyview .comment-list .info .btn-more::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 -2px;
+    background: url("../images/more.svg") no-repeat center/contain;
+}
+
+
+/*================ mobile-beautyview.html End ===================*/
+
+
+/*=============== mobile-market.html Start ==================*/
+
+#mgdb-page .market {
+    margin-top: 15px;
+}
+
+#mgdb-page .market h2 {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0 1em;
+    font-size: 18px;
+    font-weight: normal;
+    color: #111;
+    padding-left: 0;
+}
+
+#mgdb-page .market .group {
+    font-size: 18px;
+    display: block;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#mgdb-page .market .meta {
+    display: flex;
+    align-items: center;
+}
+
+#mgdb-page .market .group-icon {
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #f1f1f1;
+}
+
+#mgdb-page .market .group-name {
+    font-size: 18px;
+    flex: 1;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#mgdb-page .market .group-member {
+    font-size: 15px;
+    color: #ccc;
+}
+
+#mgdb-page .market .group-topic {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #aaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#mgdb-page .market .topic span {
+    font-size: 15px;
+    color: #aaa;
+    white-space: nowrap;
+}
+
+
+/*================ mobile-market.html End ===================*/
+
+
+/*=================== mobile.html Start =====================*/
+
+#mgdb-searchnav {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 999;
+}
+
+#mgdb-searchnav .search-bar {
+    width: 100%;
+    position: relative;
+}
+
+#mgdb-searchnav .search-bar a {
+    color: #42bd56;
+    font-size: 16px;
+    position: absolute;
+    top: 9px;
+    left: 18px;
+}
+
+#mgdb-searchnav .search-bar .search-wrapper {
+    box-sizing: border-box;
+    padding: 15px 18px 15px 60px;
+}
+
+#mgdb-searchnav .search-bar .search-ipt {
+    box-sizing: border-box;
+    width: 100%;
+    height: 31px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    background: url("../images/search.png") no-repeat 50% #f3f3f3/17px;
+}
+
+#mgdb-searchnav ul {
+    margin-top: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+#mgdb-searchnav ul li {
+    width: 33.3%;
+}
+
+#mgdb-searchnav ul li a {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    left: -50%;
+    top: 0;
+}
+
+#mgdb-searchnav ul li div {
+    float: left;
+    position: relative;
+    left: 50%;
+    top: 0;
+}
+
+#mgdb-searchnav ul li span {
+    display: block;
+    color: #999;
+    height: 17px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#mgdb-searchnav ul li a strong {
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+#mgdb-searchnav .bottom-nav {
+    width: 100%;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#mgdb-searchnav .bottom-nav .nav-item {
+    padding: 13px 0;
+    border-top: 1px solid #f3f3f3;
+}
+
+#mgdb-searchnav .bottom-nav .nav-item a {
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #42bd56;
+}
+
+#mgdb-searchnav .bottom-nav .nav-item a:first-child {
+    border-right: 1px solid #e5e5e5;
+}
+
+#mgdb-header .menu .more:hover #mgdb-searchnav {
+    display: block;
+}
+
+
+/*================== mobile.html End ===================*/
+
+
+/*==================  main.css End  ===================*/
